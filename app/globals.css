@@ -1,11 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --background: #000000;
+  --background: #0E0F0E;
   --foreground: #ffffff;
 
   /* Green accent color */
   --brand-primary: #B3FF94;
+
+  /* Radial Gradient for card background */
+  --background-gradient: radial-gradient(
+    ellipse 120% 80% at 50% 100%,
+    #193018 0%,
+    #1A1A1A 60%,
+    #1A1A1A 100%
+  );
 }
 
 @theme inline {
@@ -22,8 +30,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0E0F0E;
+    --foreground: #ffffff;
   }
 }
 

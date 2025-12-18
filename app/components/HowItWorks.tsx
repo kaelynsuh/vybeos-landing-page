@@ -27,18 +27,32 @@ const cardData: CardProps[] = [
 
 export function HowItWorks() {
   return (
-    <>
-      <h2>How It Works</h2>
-      <div>
-        VybeOS keeps your brand safe and precise, every step of the loop is
-        built to protect your tone, your visuals, and your standards.
+    <section>
+      <div className="flex flex-col justify-center items-center mb-[80px]">
+        <h3 className="font-display text-4xl font-semibold mb-[30px]">
+          How It Works
+        </h3>
+        <p className="text-center max-w-[480px]">
+          VybeOS keeps your brand safe and precise, every step of the loop is
+          built to protect your tone, your visuals, and your standards.
+        </p>
       </div>
-      {cardData.map((card, index) => (
-        <div key={card.step} className="flex items-center">
-          <Card {...card} />
-          {index < cardData.length - 1 && <Arrow />}
-        </div>
-      ))}
-    </>
+
+      <div
+        className="flex border border-[#3E3F3E] w-[1430px] h-[600px]"
+        style={{
+          background: "var(--background-gradient)",
+          clipPath:
+            "polygon(0 0, 100% 0, 100% calc(100% - 32px), calc(100% - 32px) 100%, 0 100%)",
+        }}
+      >
+        {cardData.map((card, index) => (
+          <div key={card.step} className="flex items-center">
+            <Card {...card} />
+            {index < cardData.length - 1 && <Arrow />}
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
