@@ -30,7 +30,7 @@ export function HowItWorks() {
         <h2 className="font-display mb-[40px] lg:mb-[30px] text-4xl lg:text-3xl">
           How It Works
         </h2>
-        <p className="text-center max-w-[480px] text-white mb-15 lg:mb-20 px-6 lg:px-0 ">
+        <p className="text-center max-w-[480px] text-white mb-15 lg:mb-20 px-6 lg:px-0">
           VybeOS keeps your brand safe and precise, every step of the loop is
           built to protect your tone, your visuals, and your standards.
         </p>

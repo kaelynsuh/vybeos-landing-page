@@ -26,7 +26,7 @@ export function Card({ step, title, description }: CardProps) {
   };
 
   return (
-    <div className="relative flex w-[294px] h-[500px] border border-dark-gray p-3 md:my-3">
+    <div className="relative flex w-[294px] h-[500px] border border-dark-gray p-3 md:my-3 hover:transform hover:-translate-y-1 transition-transform duration-200">
       <div
         className="absolute top-0 left-0 size-[14px] bg-brand-primary"
         style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
@@ -36,7 +36,7 @@ export function Card({ step, title, description }: CardProps) {
         <h3
           className="flex flex-col justify-center items-center size-[252px] bg-background font-display text-4xl"
           style={{
-            clipPath: "polygon(32px 0, 100% 0, 100% 100%, 0 100%, 0 32px)",
+            clipPath: "polygon(20px 0, 100% 0, 100% 100%, 0 100%, 0 20px)",
           }}
         >
           {renderTitle()}

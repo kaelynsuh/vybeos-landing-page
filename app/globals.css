@@ -41,6 +41,7 @@ body {
   background: var(--background);
   color: var(--default);
   font-family: var(--font-pp-neue-montreal), Arial, Helvetica, sans-serif;
+  font-size: 15px;
 }
 
 h2, h3 {
