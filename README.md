@@ -29,6 +29,16 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) to view the page.
 
+## Live Demo
+
+View the live deployment at: [https://vybeos-landing-page.vercel.app](https://vybeos-landing-page.vercel.app)
+
+## Screenshots
+
+<img width="1518" height="915" alt="Screenshot 2025-12-18 at 10 29 47 PM" src="https://github.com/user-attachments/assets/0a917c7e-38bf-4363-9e02-d2767b3f4f98" />
+
+<img width="280" height="881" alt="Screenshot 2025-12-18 at 10 29 59 PM" src="https://github.com/user-attachments/assets/18c23f52-b919-41e6-b3a5-524cf71fcf4b" />
+
 ## Project Structure
 
 ```
