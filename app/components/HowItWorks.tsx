@@ -4,22 +4,19 @@ import { Card, CardProps } from "./Card";
 const cardData: CardProps[] = [
   {
     step: "01",
-    title: "Train Your Brand Memory",
-    highlight: "Brand Memory",
+    title: "Train Your *Brand* *Memory*",
     description:
       "Upload your site, assets, and product data. VybeOS builds a private brand memory that captures your tone and design DNA. No shared models, no data leaks.",
   },
   {
     step: "02",
-    title: "Generate With Precision",
-    highlight: "Precision",
+    title: "Generate With *Precision*",
     description:
       "Create complete campaigns in one click. Every line and layout stays true to your brand's identity, handcrafted quality, automated delivery.",
   },
   {
     step: "03",
-    title: "Learn + Refine Safely",
-    highlight: "Safely",
+    title: "Learn + Refine *Safely*",
     description:
       "Approve, adjust, and publish inside VybeOS. The system learns only from your edits, closing the loop between performance and creative consistency.",
   },
@@ -28,18 +25,18 @@ const cardData: CardProps[] = [
 export function HowItWorks() {
   return (
     <section>
-      <div className="flex flex-col justify-center items-center mb-[80px]">
-        <h3 className="font-display text-4xl font-semibold mb-[30px]">
+      <div className="flex flex-col justify-center items-center">
+        <h2 className="font-display mb-[40px] lg:mb-[30px] text-4xl lg:text-3xl">
           How It Works
-        </h3>
-        <p className="text-center max-w-[480px]">
+        </h2>
+        <p className="text-center max-w-[480px] text-white mb-15 lg:mb-20 px-6 lg:px-0 ">
           VybeOS keeps your brand safe and precise, every step of the loop is
           built to protect your tone, your visuals, and your standards.
         </p>
       </div>
 
       <div
-        className="flex border border-[#3E3F3E] w-[1430px] h-[600px]"
+        className="flex flex-col md:flex-row md:flex-wrap min-[1180px]:flex-nowrap items-center justify-center border border-dark-gray w-[calc(100vw-48px)] min-[1478px]:w-[1430px] mx-auto py-12"
         style={{
           background: "var(--background-gradient)",
           clipPath:
@@ -47,7 +44,10 @@ export function HowItWorks() {
         }}
       >
         {cardData.map((card, index) => (
-          <div key={card.step} className="flex items-center">
+          <div
+            key={card.step}
+            className="flex flex-col md:flex-row items-center"
+          >
             <Card {...card} />
             {index < cardData.length - 1 && <Arrow />}
           </div>

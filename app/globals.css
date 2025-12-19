@@ -6,6 +6,11 @@
 
   /* Green accent color */
   --brand-primary: #B3FF94;
+  --brand-secondary: #DDE4C3;
+
+  --default: #0E0F0E;
+  --white: #ffffff;
+  --dark-gray: #3E3F3E;
 
   /* Radial Gradient for card background */
   --background-gradient: radial-gradient(
@@ -21,22 +26,24 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-default: var(--default);
+  --color-white: var(--white);
+  --color-dark-gray: var(--dark-gray);
 
   /* Fonts */
-  --font-sans: var(--font-pp-neue-montreal); /* Default for body text */
-  --font-display: var(--font-pp-neue-machina); /* For headers */
+  --font-body: var(--font-pp-neue-montreal); /* Default text */
+  --font-display: var(--font-pp-neue-machina); /* Header text */
   --font-mono: var(--font-pp-neue-montreal);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0E0F0E;
-    --foreground: #ffffff;
-  }
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: var(--default);
   font-family: var(--font-pp-neue-montreal), Arial, Helvetica, sans-serif;
+}
+
+h2, h3 {
+  color: var(--white);
+  font-weight: 600;
 }
