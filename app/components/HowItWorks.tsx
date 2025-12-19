@@ -1,6 +1,7 @@
 import { Arrow } from "./Arrow";
 import { Card, CardProps } from "./Card";
 
+// Card content data — use *word* syntax to highlight words in brand-primary color
 const cardData: CardProps[] = [
   {
     step: "01",
@@ -35,23 +36,33 @@ export function HowItWorks() {
         </p>
       </div>
 
+      {/* Outer wrapper: border color background + 1px padding for the border effect */}
       <div
-        className="flex flex-col md:flex-row md:flex-wrap min-[1180px]:flex-nowrap items-center justify-center border border-dark-gray w-[calc(100vw-48px)] min-[1478px]:w-[1430px] mx-auto py-12"
+        className="w-[calc(100vw-48px)] min-[1478px]:w-[1430px] mx-auto bg-dark-gray p-px"
         style={{
-          background: "var(--background-gradient)",
           clipPath:
             "polygon(0 0, 100% 0, 100% calc(100% - 32px), calc(100% - 32px) 100%, 0 100%)",
         }}
       >
-        {cardData.map((card, index) => (
-          <div
-            key={card.step}
-            className="flex flex-col md:flex-row items-center"
-          >
-            <Card {...card} />
-            {index < cardData.length - 1 && <Arrow />}
-          </div>
-        ))}
+        {/* Content layer */}
+        <div
+          className="flex flex-col md:flex-row md:flex-wrap min-[1180px]:flex-nowrap items-center justify-center py-12"
+          style={{
+            background: "var(--background-gradient)",
+            clipPath:
+              "polygon(0 0, 100% 0, 100% calc(100% - 32px), calc(100% - 32px) 100%, 0 100%)",
+          }}
+        >
+          {cardData.map((card, index) => (
+            <div
+              key={card.step}
+              className="flex flex-col md:flex-row items-center"
+            >
+              <Card {...card} />
+              {index < cardData.length - 1 && <Arrow />}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
